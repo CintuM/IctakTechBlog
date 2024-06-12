@@ -1,7 +1,10 @@
 package techBlog;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.time.Duration;
 import java.util.Properties;
 
@@ -18,8 +21,9 @@ public class TestBase {
 
 	public void loadProp() throws IOException {
 		prop = new Properties();
-		FileInputStream fis = new FileInputStream("D:\\Eclipse-Workspace\\IctakTechBlog\\IctakTechBlog\\src\\test\\resources\\config.properties");
-		prop.load(fis);
+		InputStream fileip = getClass().getResourceAsStream("/config.properties");
+		BufferedReader reader = new BufferedReader(new InputStreamReader(fileip));
+		prop.load(fileip);
 	}
 	
 	@BeforeMethod
