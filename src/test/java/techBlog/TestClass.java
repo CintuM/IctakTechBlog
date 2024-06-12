@@ -46,8 +46,8 @@ public class TestClass extends TestBase{
 		loginUser = new LoginPageUser(driver);
 		loginUser.locateDownArrow();
 		loginUser.locateSignUp();
-		loginUser.setName(prop.getProperty("username"));
-		loginUser.setRole(prop.getProperty("userRole"));
+		loginUser.setName(prop.getProperty("usernamevalid"));
+		loginUser.setRole(prop.getProperty("userRolevalid"));
 		loginUser.setEmail(prop.getProperty("userEmail"));
 		loginUser.setPwd(prop.getProperty("userpwd"));
 		System.out.println("Clicking on submit");
